@@ -5,6 +5,7 @@ import './home.css'
 
 function Home() {
   const [series, setSeries] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function loadSeries() {
@@ -17,10 +18,19 @@ function Home() {
       });
       // console.log(response.data.results.slice(0, 10));
       setSeries(response.data.results.slice(0, 10));
+      setLoading(false);
     }
 
     loadSeries();
   }, []);
+
+  if(loading) {
+    return(
+      <div className="loading">
+        <h2>Carregando...</h2>
+      </div>
+    )
+  }
 
   return (
     <div className="container">
