@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import api from "../../services/api";
 import "./serie.css";
+import { toast } from "react-toastify";
 
 function Series() {
   const { id } = useParams();
@@ -22,15 +23,39 @@ function Series() {
         .then((response) => {
           setSerie(response.data);
           setLoading(false);
-        }).catch(() => {
+        })
+        .catch(() => {
           navigate("/", { replace: true });
           return;
-        })
+        });
 
       return () => {};
     }
     loadSerie();
   }, [navigate, id]);
+
+  function salvarSerie() {
+    const minhaLista = localStorage.getItem("@serieFlix");
+
+    let seriesSalvas = JSON.parse(minhaLista) || [];
+
+    const hasSeries = seriesSalvas.some(
+      (seriesSalvas) => seriesSalvas.id === serie.id
+    );
+
+    if (hasSeries) {
+      toast.error("Este filme já está na listas", {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      return;
+    }
+
+    seriesSalvas.push(serie);
+    localStorage.setItem("@serieFlix", JSON.stringify(seriesSalvas));
+    toast.success("O filme foi salvo com sucesso", {
+      position: toast.POSITION.TOP_CENTER,
+    });
+  }
 
   if (loading) {
     return (
@@ -52,9 +77,15 @@ function Series() {
       <strong> Avaliação: {serie.vote_average} / 10</strong>
 
       <div className="area__buttons">
-        <button>Salvar</button>
+        <button onClick={salvarSerie}>Salvar</button>
         <button>
-          <a href={`https://youtube.com/results?search_query=${serie.title}`} rel="external" target="_blank">Trailer</a>
+          <a
+            href={`https://youtube.com/results?search_query=${serie.title}`}
+            rel="external"
+            target="blank"
+          >
+            Trailer
+          </a>
         </button>
       </div>
     </div>

@@ -1,0 +1,54 @@
+.minhas-series{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.minhas-series h1{
+    margin-bottom: 14px;
+}
+
+.minhas-series span{
+    font-size: 17px;
+}
+
+.minhas-series ul{
+    max-width: 720px;
+}
+
+.minhas-series ul li {
+    margin-top: 14px;
+    text-align: center;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.minhas-series div{
+    display: flex;
+    justify-content: center;
+}
+
+.minhas-series div a{
+    text-decoration: none;
+    margin-right: 35px;
+    margin-left: 35px;
+}
+
+.minhas-series a, button{
+    margin-right: 12px;
+    background-color: #cc020c;
+    margin-top: 14px;
+    margin-left: 0;
+    border: 0;
+    outline: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #fff;
+    transition: all 0.4s ease;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
