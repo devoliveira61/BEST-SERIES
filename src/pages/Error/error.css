@@ -1,0 +1,30 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.error h1 {
+  font-size: 60px;
+  color: aliceblue;
+  background-color: #cc020c;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 2px;
+}
+
+.error p {
+  color: aliceblue;
+  background-color: #cc020c;
+  padding: 2px;
+  font-size: 16px;
+}
+
+.error a {
+  margin-top: 10px;
+  color: #cc020c;
+  text-decoration: underline;
+  font-weight: bold;
+}
