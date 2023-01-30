@@ -1,0 +1,59 @@
+.serie__info {
+  margin: 0 auto;
+}
+
+.serie__info {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  padding: 0 8px;
+}
+
+.serie__info h1 {
+  margin: 15px 0;
+}
+
+.serie__info img {
+  border-radius: 8px;
+  width: 900px;
+  max-width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+}
+
+.serie__info h3 {
+  margin-top: 14px;
+}
+
+.serie__info span {
+  margin: 8px 0;
+}
+
+.area__buttons button {
+  margin-right: 12px;
+  background-color: #ececec;
+  margin-top: 14px;
+  margin-left: 0;
+  border: 0;
+  outline: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #000;
+  transition: all 0.4s ease;
+  font-weight: bold;
+}
+
+.area__buttons a {
+  text-decoration: none;
+  color: #000;
+}
+
+.area__buttons button:hover {
+  background-color: #cc020c;
+}
+
+.area__buttons button:active {
+  transform: scale(1.1);
+}
