@@ -1,3 +1,20 @@
+<div align="center">
+
+### BEST FILMS
+
+</br>
+
+<p>Uma aplicação que utiliza a API do TMDB e lista filmes em destaque e da opções de salva-los e favorita-los.</p>
+
+</br>
+
+![localhost-3000](https://user-images.githubusercontent.com/98242025/215551060-08c63c7a-ef7c-4281-9032-4cd7ff4124a1.png)
+
+
+<strong><a href="https://best-films.surge.sh/">Clique aqui e acesse<a></strong>
+
+</div>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
